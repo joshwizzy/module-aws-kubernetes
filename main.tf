@@ -28,7 +28,7 @@ resource "aws_iam_role" "ms-cluster" {
 
 resource "aws_iam_role_policy_attachment" "ms-cluster-AmazonEKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
-  role       = aws_iam_role.ms-cluster
+  role       = aws_iam_role.ms-cluster.name
 }
 
 resource "aws_security_group" "ms-cluster" {
